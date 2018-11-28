@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheAdventureCompany", "TheAdventureCompany\TheAdventureCompany.csproj", "{FA54821C-B6B4-43D5-A177-26E152DFF76C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tac.utils", "..\..\..\Downloads\Student Lab Resources\Training\TAC\tac.utils\tac.utils.csproj", "{1C59F3AA-127D-4D46-92A9-8EB82692B76A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FA54821C-B6B4-43D5-A177-26E152DFF76C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA54821C-B6B4-43D5-A177-26E152DFF76C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA54821C-B6B4-43D5-A177-26E152DFF76C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C59F3AA-127D-4D46-92A9-8EB82692B76A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C59F3AA-127D-4D46-92A9-8EB82692B76A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C59F3AA-127D-4D46-92A9-8EB82692B76A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C59F3AA-127D-4D46-92A9-8EB82692B76A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

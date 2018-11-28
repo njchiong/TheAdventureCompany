@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{FA54821C-B6B4-43D5-A177-26E152DFF76C}</ProjectGuid>
+    <ProjectGuid>{6F3CE9A4-568A-45E4-8182-D8D322C04B78}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TheAdventureCompany</RootNamespace>
-    <AssemblyName>TheAdventureCompany</AssemblyName>
+    <RootNamespace>TheAdventureCompany.Utils</RootNamespace>
+    <AssemblyName>TheAdventureCompany.Utils</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -94,62 +94,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\BreadcrumbController.cs" />
-    <Compile Include="Controllers\CommentsFormController.cs" />
-    <Compile Include="Controllers\EventIntroController.cs" />
-    <Compile Include="Controllers\OverviewController.cs" />
-    <Compile Include="Controllers\RelatedEventsController.cs" />
-    <Compile Include="Controllers\SubscribeFormController.cs" />
-    <Compile Include="Models\EventIntro.cs" />
-    <Compile Include="Models\NavigationItem.cs" />
-    <Compile Include="Models\OverviewItem.cs" />
-    <Compile Include="Models\OverviewList.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\FormHandlerExtensions.cs" />
+    <Compile Include="Mvc\ValidateFormHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Site.css" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Global.asax" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="App_Config\Include\TAC\Events\EventsSiteDefinition.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <None Include="Properties\PublishProfiles\Local.pubxml" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Views\web.config" />
-    <Content Include="App_Config\ConnectionStrings.config" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
-    <Content Include="Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Test.cshtml" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\TAC\Events\Layouts\Events.cshtml" />
-    <Content Include="Views\EventIntro\Index.cshtml" />
-    <Content Include="Views\TAC\Events\SideContent.cshtml" />
-    <Content Include="Views\TAC\Events\PageBody.cshtml" />
-    <Content Include="Views\TAC\Events\Two-Column.cshtml" />
-    <Content Include="Views\TAC\Events\One-Column.cshtml" />
-    <Content Include="Views\TAC\Events\HomeContent.cshtml" />
-    <Content Include="Views\TAC\Events\FeatureRow.cshtml" />
-    <Content Include="Views\TAC\Events\FeaturedEvent.cshtml" />
-    <Content Include="Views\Breadcrumb\Index.cshtml" />
-    <Content Include="Views\Overview\Index.cshtml" />
-    <Content Include="Views\RelatedEvents\Index.cshtml" />
-    <Content Include="Views\SubscribeForm\Index.cshtml" />
-    <Content Include="Views\SubscribeForm\Confirmation.cshtml" />
-    <Content Include="Views\CommentsForm\Index.cshtml" />
-    <Content Include="Views\CommentsForm\Confirmation.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -159,12 +118,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Downloads\Student Lab Resources\Training\TAC\tac.utils\tac.utils.csproj">
-      <Project>{1c59f3aa-127d-4d46-92a9-8eb82692b76a}</Project>
-      <Name>tac.utils</Name>
-    </ProjectReference>
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -179,9 +134,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>51205</DevelopmentServerPort>
+          <DevelopmentServerPort>49792</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:51205/</IISUrl>
+          <IISUrl>http://localhost:49792/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

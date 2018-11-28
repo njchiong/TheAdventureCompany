@@ -6,16 +6,16 @@ using System.Web.Mvc;
 
 namespace TheAdventureCompany.Controllers
 {
-    public class SubscribeFormController : Controller
+    public class CommentsFormController : Controller
     {
-        // GET: SubscribeForm
+        // GET: CommentsForm
         public ActionResult Index()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult Index(string email)
+        public ActionResult Index(string comment, string email)
         {
             return View("Confirmation");
         }
