@@ -44,6 +44,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\libraries\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch">
+      <HintPath>..\libraries\Sitecore.ContentSearch.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.Kernel">
       <HintPath>..\libraries\Sitecore.Kernel.dll</HintPath>
     </Reference>
@@ -95,6 +101,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Importer\Controllers\EventsController.cs" />
+    <Compile Include="Areas\Importer\ImporterAreaRegistration.cs" />
     <Compile Include="Controllers\BreadcrumbController.cs" />
     <Compile Include="Controllers\CommentsFormController.cs" />
     <Compile Include="Controllers\EventIntroController.cs" />
@@ -106,6 +114,26 @@
     <Compile Include="Models\OverviewItem.cs" />
     <Compile Include="Models\OverviewList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\Abstractions\IItem.cs" />
+    <Compile Include="Utils\Abstractions\IRenderingContext.cs" />
+    <Compile Include="Utils\Abstractions\ITranslate.cs" />
+    <Compile Include="Utils\Helpers\ApplicationExtensions.cs" />
+    <Compile Include="Utils\Helpers\FormHandlerExtensions.cs" />
+    <Compile Include="Utils\Helpers\NavigationExtensions.cs" />
+    <Compile Include="Utils\Helpers\NavigationHelper.cs" />
+    <Compile Include="Utils\Helpers\SitecoreExtensions.cs" />
+    <Compile Include="Utils\Helpers\SitecoreHelper.cs" />
+    <Compile Include="Utils\Helpers\TagHelper.cs" />
+    <Compile Include="Utils\Mvc\MVCTag.cs" />
+    <Compile Include="Utils\Mvc\ValidateFormHandler.cs" />
+    <Compile Include="Utils\Search\UrlComputedField.cs" />
+    <Compile Include="Utils\SitecoreModels\SitecoreItem.cs" />
+    <Compile Include="Utils\SitecoreModels\SitecoreTranslate.cs" />
+    <Compile Include="Utils\SitecoreModels\SitecorRenderingContext.cs" />
+    <Compile Include="Utils\Statics.cs" />
+    <Compile Include="Utils\TestModels\TestItem.cs" />
+    <Compile Include="Utils\TestModels\TestRenderingContext.cs" />
+    <Compile Include="Utils\TestModels\TestTranslate.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -118,6 +146,11 @@
     <Content Include="App_Config\Include\TAC\Events\EventsSiteDefinition.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Areas\Importer\Views\web.config" />
+    <Content Include="Areas\Importer\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Importer\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Importer\Views\Shared\Layout.cshtml" />
+    <Content Include="Areas\Importer\Views\Events\Index.cshtml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -150,6 +183,7 @@
     <Content Include="Views\SubscribeForm\Confirmation.cshtml" />
     <Content Include="Views\CommentsForm\Index.cshtml" />
     <Content Include="Views\CommentsForm\Confirmation.cshtml" />
+    <None Include="Utils\packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -159,12 +193,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Downloads\Student Lab Resources\Training\TAC\tac.utils\tac.utils.csproj">
-      <Project>{1c59f3aa-127d-4d46-92a9-8eb82692b76a}</Project>
-      <Name>tac.utils</Name>
-    </ProjectReference>
+    <Folder Include="Areas\Importer\Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
